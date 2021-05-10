@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+{%extends 'mobile/base.html'%}  <!---extending the base page here--->
+{%block body_block %}
+<div class="row">
+    <div class="col-4"></div>
+     <div class="col-4">
+         <div class="card" style="width: 18rem;">
+  <img src="{{mobile.image.url}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">name:{{mobile.product_name}}</h5>
+    <p class="card-text">specs:{{mobile.specs}}</p>
+    <a href="{% url 'order' mobile.id%}" class="btn btn-primary">Add to cart</a>
+  </div>
+</div>
+     </div>
+    <div class="col-4"></div>
+</div>
+{%endblock%}

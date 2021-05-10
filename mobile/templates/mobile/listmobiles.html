@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{%extends 'mobile/base.html'%}  <!---extending the base page here--->
+{%block body_block %}
+
+<div class="row">
+ {%for mobile in mobiles%}
+    <div class="col-4">
+        <div class="card" style="width: 18rem;">
+  <img src="{{mobile.image.url}}" class="card-img-top" alt="...">
+            <!---to see the image we have to configure it in projects url--->
+  <div class="card-body">
+    <h5 class="card-title">{{mobile.product_name}}</h5>
+    <p class="card-text">{{mobile.price}}</p>
+    <a href="{% url 'detail' mobile.id %}" class="btn btn-primary">View</a>
+      <a href="{% url 'update' mobile.id %}" class="btn btn-primary">Update</a>
+      <a href="{% url 'delete' mobile.id %}" class="btn btn-primary">Delete</a>
+  </div>
+</div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

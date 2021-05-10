@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <link rel="stylesheet" href="{%static 'css/mobilelogin.css'%}">
+</head>
+<body>
+
+<h1>welcome {{request.user}}</h1>
+<form action="" method="post">
+    {%csrf_token%}
+    </form>
+<a href="{%url 'signout'%}">logout</a>
+<a href="{%url 'listmobile'%}">listall</a>
+<a href="{%url 'addproduct'%}">Add Product</a>
+
+</body>
+</html>

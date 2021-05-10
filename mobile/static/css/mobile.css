@@ -1,0 +1,17 @@
+body{
+background-color:#A3E4D7 ;
+}
+h1{
+color:#a83232;
+}
+.main{
+background-color:#E4A5A3  ;
+width:40%;
+position:absolute;
+left:30%;
+top:30%;
+}
+.main2{
+position:relative;
+padding-left:180px;
+}

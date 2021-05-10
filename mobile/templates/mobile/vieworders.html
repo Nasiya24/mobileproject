@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>product</td>
+        <td>price</td>
+        <td>status</td>
+    </tr>
+    {% for order in orders%}
+    <tr>
+        <td>{{order.product}}</td>
+        <!---how you have written in model--->
+         <td>{{order.product.price}}</td>
+         <td>{{order.status}}</td>
+        <td><a href="{%url 'cancel' order.id %}">cancel order</a> </td>
+    </tr>
+    {% endfor %}
+
+</table>
+</body>
+</html>

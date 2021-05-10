@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <link rel="stylesheet" href="{%static 'css/mobilelogin.css'%}">
+</head>
+<body>
+<div class="main">
+    <div class="main2">
+<h1> Login form</h1>
+<form action="" method="post">
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="submit" value="login">
+</form>
+    </div>
+</div>
+</body>
+</html>

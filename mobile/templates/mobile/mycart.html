@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{%extends 'mobile/base.html'%}  <!---extending the base page here--->
+{%block body_block %}
+<div class="container">
+    <div class="row">
+        {% for cart in cart_item%}
+        <div class="card" style="width: 18rem;">
+  <img src="{{cart.product.image.url}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{cart.product}}</h5>
+    <p class="card-text">{{cart.product.specs}}</p>
+      <p class="card-text">{{cart.product.price}}</p>
+    <a href="{% url 'remove' cart.id%}" class="btn btn-primary">Remove</a>
+  </div>
+</div>
+    </div>
+</div>
